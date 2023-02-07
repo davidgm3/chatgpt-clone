@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-in-right {
+	animation: fadeInRight 0.3s ease-in-out;
+}
+
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+.fade-in-left {
+	animation: fadeInLeft 0.3s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+:root {
+	--doc-height: 100%;
+}
+html,
+body {
+	height: var(--doc-height);
+	overflow: hidden;
+}
+#root {
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	width: min(100%, 900px);
+	margin-inline: auto;
+}
